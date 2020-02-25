@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="02/21/20||10:11:32" using="Simscape Multibody Link Version 6.1" from="SolidWorks 26.0.0"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="Pendulum-Model" uid="Pendulum-Model" version="143">
+<AssemblyFile name="Pendulum-Model.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="pen-1" uid="pen-1" entityUid="pen*:*默认">
+<Transform>
+<Rotation>0.98485389736723561 0 0.17338627639051168 0.17338627639051168 0 -0.98485389736723561 0 1 0</Rotation>
+<Translation>0.0068090018554789024 -0.038675909963287611 0.0030000000000000001</Translation>
+</Transform>
+</Instance>
+<Instance name="shaft-1" uid="shaft-1" grounded="true" entityUid="shaft*:*默认">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Concentric name="同心1">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>shaft-1</Uid>
+</InstancePath>
+<Position>0 0 0.0040000000000000001</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pen-1</Uid>
+</InstancePath>
+<Position>0 0 -0.039270708139225674</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="重合4">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>shaft-1</Uid>
+</InstancePath>
+<Position>0 0 0.0040000000000000001</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pen-1</Uid>
+</InstancePath>
+<Position>0 0.001 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+</Assemblies>
+<Parts>
+<Part name="pen" uid="pen*:*默认" version="148">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="pen.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>7.8036504591506392e-06</Mass>
+<CenterOfMass>0 0.00050000000000000001 -0.036451514722610927</CenterOfMass>
+<Inertia>1.729164774449601e-11 2.2304942244657691e-11 6.3139029100201207e-12 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="pen_默认_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.88" g="0.88" b="0.88" a="1"/>
+<Emissive r="0.20999999999999999" g="0.20999999999999999" b="0.20999999999999999" a="1"/>
+<Shininess>0.20999999999999999</Shininess>
+</VisualProperties>
+</Part>
+<Part name="shaft" uid="shaft*:*默认" version="146">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="shaft.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>7.8539816339744844e-07</Mass>
+<CenterOfMass>0 0 0.002</CenterOfMass>
+<Inertia>1.0594693974996832e-12 1.0594693974996832e-12 2.4543692606170265e-14 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="shaft_默认_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.88" g="0.88" b="0.88" a="1"/>
+<Emissive r="0.20999999999999999" g="0.20999999999999999" b="0.20999999999999999" a="1"/>
+<Shininess>0.20999999999999999</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
